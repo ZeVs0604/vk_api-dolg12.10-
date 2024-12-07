@@ -1,18 +1,18 @@
-class App {
+class AppDto {
   final String type;
   final int id;
   final String title;
   final int mobileControlsType;
 
-  App({
+  AppDto({
     required this.type,
     required this.id,
     required this.title,
     required this.mobileControlsType,
   });
 
-  factory App.fromJson(Map<String, dynamic> json) {
-    return App(
+  factory AppDto.fromJson(Map<String, dynamic> json) {
+    return AppDto(
       type: json['type'],
       id: json['id'],
       title: json['title'],

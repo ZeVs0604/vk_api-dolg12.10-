@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'data/vk_api.dart';
-import 'models/apps_response.dart';
-
+import 'dto/apps_response.dart';
+import 'domain/api_service.dart';
+import 'domain/app.dart';
 
 void main() {
   runApp(MyApp());
@@ -17,8 +17,8 @@ class MyApp extends StatelessWidget {
           title: Text('VK Apps Get'),
         ),
         body: Center(
-          child: FutureBuilder<AppsResponse>(
-            future: VkApi().fetchApps(),
+          child: FutureBuilder<AppsResponseDto>( // Изменяем тип на List<App>
+            future: ApiService().fetchApps(),
             builder: (context, snapshot) {
               if (snapshot.connectionState == ConnectionState.waiting) {
                 return CircularProgressIndicator();
