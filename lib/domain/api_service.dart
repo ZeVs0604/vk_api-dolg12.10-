@@ -5,7 +5,7 @@ import '../token.dart';
 import 'app.dart';
 
 class ApiService {
-  final String _serviceKey = 'b2f7f28eb2f7f28eb2f7f28edab1ea847dbb2f7b2f7f28ed42e20f1e16698f19e7ebe0d';
+  final String _serviceKey = serviceKey;
   final String _baseUrl = 'https://api.vk.com/method/apps.get';
 
   Future<String> getApps() async {
