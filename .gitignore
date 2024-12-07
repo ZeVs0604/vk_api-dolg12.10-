@@ -41,5 +41,5 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
-package:propusk1210/token.dart
+/lib/token.dart
 
